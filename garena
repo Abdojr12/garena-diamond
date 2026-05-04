@@ -1,15 +1,62 @@
-print("helllo world im workin in garenna and if you do this fomilare you gonna won 500 dimond")
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Concours 500 Diamonds</title>
 
-name = input("do your name :")
-print(name)
+<style>
+body {
+  font-family: Arial;
+  background: black;
+  color: white;
+  text-align: center;
+}
 
-age = int(input("do you age :"))
-print(age)
+.container {
+  margin-top: 50px;
+}
 
-gmail = input("do your gmail :")
-print(gmail)
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 220px;
+}
 
-password = input("do your password :")
-print(password)
+button {
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+}
+</style>
 
-print("ok now you ar the winner wait im gonna send you in gmail")
+</head>
+
+<body>
+
+<h1>🔥 Concours 500 Diamonds 🔥</h1>
+<p>دخل المعلومات ديالك و جرب الحظ 🎮</p>
+
+<div class="container">
+  <input type="text" id="id" placeholder="Player ID"><br>
+  <input type="email" id="email" placeholder="Gmail (اختياري)"><br>
+  <button onclick="addPlayer()">Participer</button>
+
+  <h2 id="msg"></h2>
+</div>
+
+<script>
+function addPlayer() {
+  let id = document.getElementById("id").value;
+  let email = document.getElementById("email").value;
+
+  if(id !== "") {
+    document.getElementById("msg").innerText = "تم التسجيل بنجاح ✅";
+  } else {
+    document.getElementById("msg").innerText = "دخل Player ID ❗";
+  }
+}
+</script>
+
+</body>
+</html>
